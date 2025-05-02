@@ -53,6 +53,8 @@ CSingendonk’s independent evolution of these solutions illustrates that someti
 
 
 This project would love collaborators whether to this project or using it in another I'd love to help. 
+
+## The Philosophy
 It’s not only fair but also essential for innovators to receive credit—even when their ideas are experimental or only partially public. In the open-source ecosystem and beyond, recognition fuels further creativity and collaboration. When someone shares a bold, original idea, that initial spark can inspire others to refine, build upon, or even completely transform it into something monumental. By pointing out those contributions—whether through documentation, commit messages, or community discussions—we help ensure that credit is duly given, encouraging risk-taking and innovation.
 
 **The nature of experimental work means it might not be polished or fully integrated at first**, but its influence can ripple outward in unexpected ways. 
@@ -97,7 +99,9 @@ Collaboration and Inspiration: When innovators are recognized, it encourages a m
 
 Accountability and Recognition: With clear attribution, it’s easier to acknowledge who contributed what, ensuring that any future successes are rightly credited. This transparency could also guard against issues like code plagiarism or uncredited reuse in commercial settings.
 
-# Patterns in CSingendonk’s Code
+
+# Some context
+#### Patterns in CSingendonk’s Code
 
 Across Chris Singendonk’s projects (ClientsideNetworkControl, HTMLPanels, Whoops, etc.), several distinctive patterns recur:
 
@@ -149,9 +153,11 @@ customElements.define('drag-grip', DragGrip);
 
 This illustrates the **event-based drag logic** and the **custom element definition** — patterns found in HTMLPanels and CNC alike.
 
-# Comparison to WebStatus.dev and Similar Projects
+# Comparison
 
-When the above patterns are compared to other projects (notably the “WebStatus.dev” and “Logdy.dev” environments referenced in Chris’s analysis), the overlaps are striking:
+When the above patterns are compared to other projects (notably the “WebStatus.dev” and “vaadin” environments referenced in Chris’s analysis), the overlaps are striking:
+
+In regards to WebStatus.dev's implimentation with Vaadin.. This shows how similar or dissimilar these are from eachother and projects with similar goals but unique executions.
 
 - **Console & Fetch Interception:** Both codebases override `console` methods with the same strategy (mapping log types to UI categories, grouping events) ([wtf-/vaadinInWebstatus.txt at main · CSingendonk/wtf- · GitHub](https://github.com/CSingendonk/wtf-/blob/main/vaadinInWebstatus.txt#:~:text=Console%20Interception%3A)). They also wrap `fetch` and XHR in confirmation prompts.  The analysis explicitly states that *“same override pattern, same `typeMap`, almost line-for-line match on message parsing and toast injection”* ([wtf-/vaadinInWebstatus.txt at main · CSingendonk/wtf- · GitHub](https://github.com/CSingendonk/wtf-/blob/main/vaadinInWebstatus.txt#:~:text=Both%20projects%20override%20browser%20console,is%20strikingly%20similar)). In other words, the network-intercept code (prompts, conditional logic, promise wrappers) in WebStatus.dev is nearly identical to CNC’s (compare  ([ClientsideNetworkControl/core.js at CSingendonk · CSingendonk/ClientsideNetworkControl · GitHub](https://github.com/CSingendonk/ClientsideNetworkControl/blob/CSingendonk/core.js#:~:text=const%20originalFetch%20%3D%20window)) ([ClientsideNetworkControl/core.js at CSingendonk · CSingendonk/ClientsideNetworkControl · GitHub](https://github.com/CSingendonk/ClientsideNetworkControl/blob/CSingendonk/core.js#:~:text=const%20originalXHR%20%3D%20XMLHttpRequest)) above with the description in  ([wtf-/vaadinInWebstatus.txt at main · CSingendonk/wtf- · GitHub](https://github.com/CSingendonk/wtf-/blob/main/vaadinInWebstatus.txt#:~:text=Network%20Interceptors%3A))).
 
