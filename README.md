@@ -1,6 +1,12 @@
-**Unfortunately rather than address a matter with respect, or at all, when a consumer/user has a question, several parties have opted to get all content on CSingendonks account hidden from the public. All without a single response, or attempt to even acknowledge anything was happening at all, by multiple representatives, contacted through multiple channels of communication. All without a single response. The absence of any input from these individuals and organizations is unprofesional and does no favours to any of the involved (or not involved, rather). The contents of this repo are not only documentation but working examples and a call to action. Please take 2 minutes to consider the information in this readme file before making any assumptions.
+Welcome to the repo! Thanks for checking things out. 
+
+First and foremost, you are hereby invited to collaborate on these projects!
+
+ - *and quickly a grievance*
+   **Unfortunately** rather than address a matter with respect, or at all, when a consumer/user has a question, several parties have opted to get all content on CSingendonks account hidden from the public. All without a single response, or attempt to even acknowledge anything was happening at all, by multiple representatives, contacted through multiple channels of communication. All without a single response. The absence of any input from these individuals and organizations is unprofesional and does no favours to any of the involved (or not involved, rather). The contents of this repo are not only documentation but working examples and a call to action. Please take 2 minutes to consider the information in this readme file before making any assumptions.
 Thank You.
 
+# ClientsideNetworkControl
 The snapshot that’s been released isn't meant to be a polished, fully functional product; it’s intentionally bare-bones—a minimal demo meant to showcase some of the key functionalities that are under active refinement behind the scenes in the private project. Here’s what’s happening:
 
 A Showcase, Not the Full Project: The publicly available version is an incomplete snapshot. It's like a teaser that highlights core features of the ClientsideNetworkControl project without presenting all the robust integrations and refined functionality currently being developed privately. Think of it as a work-in-progress demo that illustrates the vision and direction of the project while intentionally leaving room for collaborative input and further development.
@@ -11,23 +17,23 @@ Promotion of Collaborative Development: By putting out an imperfect, minimal ver
 
 This strategy, though it might seem counterproductive at first glance, helps protect the integrity and vision of the original work while also creating a space for shared development. It’s a clever move to both guard against uncredited replication and to foster an environment where improvements are driven by community collaboration rather than by individuals merely copying code.
 
+#### The Whats, Whys, and Hows
 >"CSingendonk’s approach represents a kind of organic, independent evolution of client-side solutions that diverges from the “big framework” trend. His projects—like >ClientsideNetworkControl—exemplify a philosophy that prioritizes"
 the following:
 
-- #### Zero Dependencies
+- Zero Dependencies
 > Rather than relying on third-party libraries, CSingendonk has evolved solutions that are entirely self-contained. These modules are >written to work out >of the box across various browsers without pulling in extra baggage, keeping the footprint ultra-light. This independence means the code is easier to >integrate into ?>diverse environments without worrying about version conflicts or unnecessary overhead.
 >
-- #### Encapsulation
+- Encapsulation
 > Through IIFEs and Nested Objects his methodology involves wrapping functionality within Immediately Invoked Function Expressions (IIFEs) or similarly nested object structures. By doing this, the modules encapsulate their own state and behavior, avoiding any pollution of the global namespace. This kind of design ensures that each module not only handles its own logic but also manages its own HTML generation and self-styling.
 >
-- #### Self-Injection:
+- Self-Injection:
 >  CSingendonk’s modules often generate HTML markup directly from JavaScript string literals—leveraging ES6 template literals—which then self-inject into the DOM. This technique provides a robust encapsulation where components manage their own visual representation and responsive behavior without needing an external CSS file or additional templating engine.
 >
- - #### Responsiveness
- - #### and Browser Agnosticism:
+ - Responsiveness and Browser Agnosticism:
 > By following a design that’s strictly client-side and relying on standard browser features, these solutions are inherently browser agnostic. They are crafted to respond to various environments, adapting their presentation on the fly. This independent evolution is a reaction to frameworks that, while powerful, can sometimes be too prescriptive or heavy-handed for smaller-scale or embedded scenarios.
 >
-- #### Organic Iteration Over Time:
+- Organic Iteration Over Time:
 > Rather than following trends from major frameworks or conforming to rigid design methodologies, CSingendonk’s solutions evolved organically from the needs he encountered. This independent evolution allowed him to refine his modules through real-world use cases, emphasizing simplicity, performance, and ease of integration—traits that resonate especially well in projects where external dependencies are seen as a liability.
 >
 > ## Beneath the Surface: 
