@@ -2,7 +2,17 @@ Welcome to the repo! Thanks for checking things out.
 
 First and foremost, you are hereby invited to collaborate on these projects!
 
- - *and quickly a grievance*
+
+**What's this?**
+
+Below you will find documentation for the clientsidenetworkcontrol project, the inspirations and aspirations for the project and the overall styles used.
+To give you, the reader, as much context and insight as possible there is alot of information and that is all relevant to the rest in the fuller context.
+In summary, the initial paragraphs are focused on providing a clear picture of what this project is, was, and intends to be.
+The next part is a call to action to the Open Source communities.
+That is followed by a detailed investigation into copyright infringement and wrongful usage of code directly from this project including comparisons to example why other similar projects are not related and evidence as to how, and why, and when, and where, and who-from, the projects that are nearly identical and certainly derivitives, are.
+This also gives context as to why this is all here and why the other projects are included in this archive.
+
+*and quickly a grievance regarding such matters:*
    **Unfortunately** rather than address a matter with respect, or at all, when a consumer/user has a question, several parties have opted to get all content on CSingendonks account hidden from the public. All without a single response, or attempt to even acknowledge anything was happening at all, by multiple representatives, contacted through multiple channels of communication. All without a single response. The absence of any input from these individuals and organizations is unprofesional and does no favours to any of the involved (or not involved, rather). The contents of this repo are not only documentation but working examples and a call to action. Please take 2 minutes to consider the information in this readme file before making any assumptions.
 Thank You.
 
@@ -127,25 +137,49 @@ For example, a simplified snippet of the drag/move handler illustrates these pat
 class DragGrip extends HTMLElement {
   constructor() {
     super();
-    this.initialMousePosition = {};
-    this.initialParentPosition = {};
-    this.addEventListener('mousedown', this.onMouseDown.bind(this));
-    document.addEventListener('mousemove', this.onMouseMove.bind(this));
-    document.addEventListener('mouseup', this.onMouseUp.bind(this));
+
+    // establish this-scoped variables
+    const reference = this.reference != null ? this.reference : document;
+    Object.assign(this, {
+      initialMousePosition: {},
+      initialParentPosition: {},
+      isDragging = 'true',
+      content = null,
+      reference: reference
+    });
+    
+    // attach element-scoped this-events
+    this.addEventListener(..., bind)
+    // bind reference-scoped this-events
+    this.reference.addEventListener('mousemove', this.onMouseMove.bind(this));
+    this.reference.addEventListener('mouseup', this.onMouseUp.bind(this));
   }
+
+  // static CustomElement default hooks
+  // ...
+
+  // markup and build logic
+  // ... ex. this.shadowRoot.content = this.content;
+  /**
+  * docs...
+  */
   onMouseDown(e) {
     this.isDragging = true;
     this.initialMousePosition.x = e.clientX;
     this.initialMousePosition.y = e.clientY;
     this.style.cursor = 'grabbing';
-    const parent = this.parentElement;
-    if (parent) {
-      this.initialParentPosition.x = parent.offsetLeft;
-      this.initialParentPosition.y = parent.offsetTop;
+    const parent = this.parentElement ? this.parentElement : (... ? ... : ...) ... : false;
+    if (parent !== false) {
+      try {
+      this.initialParentPosition ...
+      //...
+      } catch (...) {...}
     }
+    // ...
     e.preventDefault();
-  }
-  // ... onMouseMove and onMouseUp follow similarly ...
+    // ... 
+}
+  // additional this-event methods ...
 }
 customElements.define('drag-grip', DragGrip);
 ``` 
